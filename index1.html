@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexsir-dive into coding</title>
+    <!-- <link rel="stylesheet" href="/index.css"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="shortcut icon" href="logo1.webp" type="image/x-icon">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/c123228cd1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/c123228cd1.js" crossorigin="anonymous"></script>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Monsterrat&family=Poppins&family=Nunito&family=Roboto&family=Tillana&display=swap');
+    .carousel-bt {
+        width: 18%;
+        border-radius: 20px;
+        color: white;
+        padding: 1em 2em;
+        position: absolute;
+        display: flex;
+        background-color: #000000a1;
+        top: 39%;
+        left: 38%;
+    }
+
+    .carousel-cell i.fa {
+        font-size: 2.5em;
+        margin: auto;
+        transition: 250ms;
+    }
+
+    .carousel-cell a:hover .carousel-bt {
+        background: red;
+    }
+
+    .carousel-cell img,
+    .carousel-bt {
+        cursor: pointer;
+    }
+    .heading-box{
+        font-family: 'Nunito', sans-serif;
+        font-weight: 600;
+        text-align: center;
+    }
+    h6{
+        font-size: 1.2em;
+        font-family: 'Tillana', cursive;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.778);
+    }
+    .pic{
+        width: 65%!important;
+    }
+    .img-fluid{
+        width: 45%;
+    }
+    hr{
+        height: 4px !important;
+    margin-top: -2em;
+    }
+    .heading2{
+       
+        color:#66037B; 
+        width: 20em; 
+        margin-left: 9.2em;
+    margin-top: 2.9em; 
+        background-color: #ffff0085; 
+        border-radius: 30px;
+        box-shadow: 4px 6px 1px 2px;
+    }
+    .fa-copy{
+        color: white;
+    }
+
+    .edit {
+        display: flex;
+        margin: 1.5em 0;
+        border: 2px solid #66037B;
+    border-radius: 30px;
+    /* padding: 1em; */
+    padding: 0.7em;
+    
+       
+    }
+    mark{
+        background-color: #ffec89;
+    }
+    .car {
+        width: 90%;
+        height: 28%;
+        overflow: hidden;
+    }
+
+    pre {
+        overflow-y: scroll;
+        height: 30em;
+        /* margin: 2.5em 0; */
+    }
+
+    .editor_btn {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1em;
+       
+    }
+
+    .editor_btn button {
+        border-radius: 52px;
+        transition: 230ms;
+        font-size: 1.6em;
+        padding: 0.4em 0.5em;
+        border:2px solid #66037B;
+        background-color: #66037B;
+    }
+    .fa-copy:hover{
+        color: yellow;
+    }
+
+
+    @media only screen and (max-width:768px){
+        .heading2{
+            width: 12em;
+    margin-left: 0.7em;
+    margin-top: 4em;
+        }
+        .img-fluid{
+            width: 100%;
+        }
+        .pic{
+            width: 100% !important;
+        }
+    }
+    
+</style>
+
+<body>
+    <div class="dark-bg"></div>
+    <div class="sidebar mb-4" style="overflow: hidden;">
+        <span class="sidebar-icon">
+            <i></i>
+        </span>
+
+        <div class="logo mt-5">
+            <embed src="logo1.webp" type="" style=" position: relative;
+    width: 12em;
+    top: -1em;">
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="link_name">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-user-large"></i>
+                    <span class="link_name">About</span>
+                </a>
+            </li>
+            <li>
+                <a href="#courses">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span class="link_name">Courses</span>
+                </a>
+            </li>
+            <li>
+                <a href="#part7">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="link_name">Contact</span>
+                </a>
+            </li>
+        </ul>
+        <div class="social-footer" style="margin-top: 1em; width:388px;">
+            <a class="share-footer-icon-fb">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a class="share-footer-icon-tweet">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="share-footer-icon-insta">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <!-- <div class="social ms-3 me-3">
+                <ul>
+                    <li>
+                       
+                        <a href="" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="" class="instagram"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div> -->
+    </div>
+    <!-- NAVBAR -->
+    <div class="nave pb-4">
+        <label for="" class="nave-head">
+            <a href="/">
+                <embed src="logo1.webp" type="" style="
+    width: 10.3em;
+    top: -2em;margin-top: -21px;cursor: pointer;">
+            </a>
+        </label>
+
+
+        <div class="sidenav_button lg-icon " style="float: right;margin-top: 0.6em;">
+            <!-- <i class="fa-solid fa-laptop"></i> -->
+            <img src="webicon.webp" style="width:3.5em;cursor:pointer;">
+        </div>
+        <!-- <i class=" sidenav_button fa-solid fa-laptop iconlap"  id="icon_img"></i> -->
+        <img src="webicon.webp" class="sidenav_button" id="icon_img">
+        <!-- <img src="/icon(2).png" alt="" id="icon_img"> -->
+
+
+    </div>
+
+    <!-- <div class="part2_headdiv javadiv" style="width: 65%; margin-bottom:-1em;margin-top:7em;">
+        <h1
+          style="font-size:2 em;font-weight: 700; color: #66037B;;font-family: 'Monoton', cursive;position: relative; text-align: center;">
+          Class 10 ICSE - Java</h1>
+      </div> -->
+      <h1 class="text-center heading-box heading2" > Class 10 ICSE - Java Methods Programs</h1>
+      <div class="container mt-3" style="display:flex; flex-direction:column;">
+        <div style="margin-bottom:-2em;">
+    
+          <h6>Class 10th Java aims to empower students by enabling them to build
+            their own applications introducing some effective tools to
+            enable them to enhance their knowledge, broaden
+            horizons, foster creativity, improve the quality of
+            work and increase efficiency.</h6>
+    
+        </div>
+        <div style="margin-bottom:-2em;">
+          <h6> It also develops logical and analytical thinking so that
+            they can easily solve interactive programs.
+            Students learn fundamental concepts of
+            computing using object oriented approach in one
+            computer language with a clear idea of ethical
+            issues involved in the field of computing</h6>
+        </div>
+        <div>
+          <h6> Class 10th java topics includes revision of class 9th, constructors, user-defined methods, objects and
+            classes,
+            library classes , etc. </h6>
+        </div>
+      </div>
+      <div class="container rounded py-5 d-flex flex-column justify-content-center" style="background-color: #f7ecfabf">
+       
+        
+        <!-- <h3 class="heading-box" style="color:#66037B;">What are Methods ?</h3><hr>
+        <span style="margin-top:-2em">
+        </span> -->
+        <div class="row">
+            <div class="col mt-3">
+                <h6 style="color:#66037B"><span class="fw-bold"> Program 1:</span>
+                    Write a program using method to subtract two numbers and print the result for the same.
+
+                </h6>
+                <h6><span style="color:green">Solution:</span></h6>
+                <div class="edit">
+                    <div class="editor_btn" onclick="copy(this)">
+                        <button class="mb-3"><i class="fa fa-solid fa-copy"></i></button>
+
+                    </div>
+                    <div class="car">
+                        <pre style="font-weight: 900;
+                        font-size: medium; font-family: 'Tillana', cursive;">
+class Difference {
+
+    // create a method
+    public int subtract(int a, int b) {
+      int diff = a - b;
+      // return value
+      return diff;
+    }
+  
+    public static void main(String[] args) {
+      
+      int num1 = 25;
+      int num2 = 15;
+  
+      // create an object of class
+      Difference obj = new Difference();
+      // calling method
+      int result = obj.subtract(num1, num2);
+      System.out.println("Difference is: " + result);
+    }
+  }
+                        </pre>
+                    </div>
+                </div><br>
+                <h6>In the above example, we have created a method named subtract(). The method takes two parameters a and b.<br>
+
+                    <b class="text-danger">int result = obj.subtract(num1, num2);</b><br>
+                    Here, we have called the method by passing two arguments num1 and num2. Since the method is returning some value, we have stored the value in the result variable and displaying the difference on terminal</h6>
+            </div>
+        </div>
+        <h3 class="heading-box" style="color:#66037B;">Method Parameters</h3><hr>
+        <div class="row">
+            <div class="col mt-3">
+                <h6 style="color:#66037B"><span class="fw-bold"> Program 2:</span>
+                    Write a program using method. The method take value as age and print the message shown below :<br><br>
+                    age greater than or equal to 18 - "You are elegible for voting".<br>
+                    age less than 18 - "You are not elegible for voting".
+
+                </h6>
+                <h6><span style="color:green">Solution:</span></h6>
+                <div class="edit">
+                    <div class="editor_btn" onclick="copy(this)">
+                        <button class="mb-3"><i class="fa fa-solid fa-copy"></i></button>
+
+                    </div>
+                    <div class="car">
+                        <pre style="font-weight: 900;
+                        font-size: medium; font-family: 'Tillana', cursive;">
+class Elegibility {
+
+    // Create a checkAge() method with an integer variable called age
+    static void checkAge(int age) {
+  
+      // If age is less than 18, print "access denied"
+      if (age < 18) {
+        System.out.println("You are not elegible for voting");
+  
+      // If age is greater than, or equal to, 18, print "access granted"
+      } else {
+        System.out.println("You are elegible for voting");
+      }
+  
+    }
+  
+    public static void main(String[] args) {
+      checkAge(20); // Call the checkAge method and pass along an age of 20
+    }
+  }
+                        </pre>
+                    </div>
+                </div><br>
+                <h6>In the above example, we have created a method named checkAge(). The method takes a parameter age. <br>
+
+                    <b class="text-danger">checkAge(20);</b><br>
+                    Here, we have called the method by passing argument 20. "age" is formal parameter and value "20" is the actual parameter. The method is not returning any value. </h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-3">
+                <h6 style="color:#66037B"><span class="fw-bold"> Program 3:</span>
+                    Write a program using method to find the square of a number.
+
+                </h6>
+                <h6><span style="color:green">Solution:</span></h6>
+                <div class="edit">
+                    <div class="editor_btn" onclick="copy(this)">
+                        <button class="mb-3"><i class="fa fa-solid fa-copy"></i></button>
+
+                    </div>
+                    <div class="car">
+                        <pre style="font-weight: 900;
+                        font-size: medium; font-family: 'Tillana', cursive;">
+class square
+{
+    public int findSquare(int n) // formal parameter
+    {
+        int res = n * n;
+        return res;
+    }
+    
+    public void ComputeSquare()
+    {
+        int num = 5;
+        int myResult = findSquare(num); // actual parameter
+        System.out.println("Square of " + " " + num + " " + "is =" + myResult); // Square of 5 is =25
+    }
+}
+                        </pre>
+                    </div>
+                </div><br>
+                <h6>In the above example, we have created a method named findSquare(). The method takes a parameter n. <br>
+
+                    <b class="text-danger"> int myResult = findSquare(num);</b><br>
+                    Here, we have called the method by passing  argument num. "n" is formal parameter and "num" is the actual parameter. Since the method is returning a value we have stored the result in a variable. </h6>
+            </div>
+        </div>
+        <h3 class="heading-box" style="color:#66037B;">Invoking Methods</h3><hr>
+        <div class="row">
+            <div class="col mt-3">
+                <h6 style="color:#66037B"><span class="fw-bold"> Program 4:</span>
+                    Write a program to display two messages using invoking methods , one with no parameter and other with a parameter.
+
+                </h6>
+                <h6><span style="color:green">Solution:</span></h6>
+                <div class="edit">
+                    <div class="editor_btn" onclick="copy(this)">
+                        <button class="mb-3"><i class="fa fa-solid fa-copy"></i></button>
+
+                    </div>
+                    <div class="car">
+                        <pre style="font-weight: 900;
+                        font-size: medium; font-family: 'Tillana', cursive;">
+class Main 
+{
+
+  // method with no parameter
+  public void display1() {
+    System.out.println("Method with no parameter");
+  }
+
+  // method with single parameter
+  public void display2(int n) {
+    System.out.println("Method with a parameter: " + n);
+  }
+
+  public static void main(String[] args) {
+    
+    // create an object of Main
+    Main obj = new Main();
+
+    // calling method with no parameter
+    obj.display1();
+    
+    // calling method with the single parameter
+    obj.display2(24);
+  }
+}
+                        </pre>
+                    </div>
+                </div><br>
+                <h6>In the above example, we have created two methods display1() with no parameter and display2() with single parameter. We are creating object of the class and then calling both the methods using (.) dot keyword.  </h6>
+            </div>
+        </div>
+        <h3 class="heading-box" style="color:#66037B;">Returning from Methods</h3><hr>
+        <div class="row">
+            <div class="col mt-3">
+                <h6 style="color:#66037B"><span class="fw-bold"> Program 5:</span>
+                    Write a program using methods to compare two numbers and find which number is greatest.
+
+                </h6>
+                <h6><span style="color:green">Solution:</span></h6>
+                <div class="edit">
+                    <div class="editor_btn" onclick="copy(this)">
+                        <button class="mb-3"><i class="fa fa-solid fa-copy"></i></button>
+
+                    </div>
+                    <div class="car">
+                        <pre style="font-weight: 900;
+                        font-size: medium; font-family: 'Tillana', cursive;">
+class  Compare   
+{  
+    // Method with an integer return type   
+    public int CompareNum(int x, int y)   
+    {   
+        System.out.println("x = " + x + "\ny = " + y);  
+        if(x>y)  
+            return x;  
+        else  
+            return y;  
+    }  
+      
+      
+    public static void main(String ar[])   
+    {  
+        Compare obj = new Compare(); // object creation  
+        int result = obj.CompareNum(15,24); //storing the result in a variable  
+        System.out.println("The greater number among x and y is: " + result);  
+    }  
+}
+                        </pre>
+                    </div>
+                </div><br>
+                <h6>In the above example we have created a method CompareNum() which takes two parameters , the method returns the greatest number and prints the message along with the number </h6>
+            </div>
+        </div>
+
+      </div>
+
+    <div class="part2_headdiv" style="width: 65%; margin-bottom:-4em;margin-top:10em;">
+        <h1
+            style="font-size:2 em;font-weight: 700; color: #66037B;;font-family: 'Monoton', cursive;position: relative; text-align: center;">
+            Contact Us</h1>
+    </div>
+    <!-- FOOTER -->
+    <section id="part7">
+        <div class="row" style="justify-content: space-around;">
+            <div class="col-lg-5 services">
+                <h2 style="text-align: center;">REACH US</h2>
+                <iframe class="frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.425360007304!2d80.96099371421445!3d26.858223668901264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd30a72dfa5b%3A0x35c4b4954027142b!2sIQ%20CLASSES!5e0!3m2!1sen!2sin!4v1643434358193!5m2!1sen!2sin"
+                    width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <div class="col-lg-4 services">
+                <h2>SERVICES</h2>
+                <ul>
+                    <li style="font-family: 'Source Code Pro', monospace;">CODING</li>
+                    <li style="font-family: 'Source Code Pro', monospace;">ON-LINE PREPARATION</li>
+                    <li>JAVA & PYTHON</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 visit">
+                <h2>ADDRESS</h2>
+                <div class="sub-visit">
+                    <address>
+                        B-54, Krishna Bhawan, Parag Narain Road,
+                        Near Butler Palace Colony Lucknow
+                    </address>
+                </div>
+                <div class="sub-visit">
+                    <address>
+                        Contact:+ 91790552 9739
+                    </address>
+                </div>
+                <div class="sub-visit">
+                    <address>Email:info@iqclasses.in</address>
+                </div>
+
+
+            </div>
+
+            <div class="social-footer" style="margin-top: 7em;">
+                <a class="share-footer-icon-fb">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a class="share-footer-icon-tweet">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="share-footer-icon-insta">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+    </section>
+
+
+
+    <!-- BOOTSTRAP JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    <!-- FLICKITY JS CDN -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script>
+        function copy(e) {
+            let code = e.parentNode.children[1].children[0]
+            navigator.clipboard.writeText($(code).text());
+        }
+
+    </script>
+
+</body>
+
+</html>
